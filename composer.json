@@ -5,6 +5,16 @@
         "beyondcode",
         "laravel-websockets",
         "laravel",
-        "php"
-    ]
+        "php",
+    ],
+  "extra": {
+        "laravel": {
+            "providers": [
+                "l3lackrooz\\laravel-boxpayment\\BoxPaymentServiceProvider"
+            ],
+            "aliases": {
+                "WebSocketRouter": "BeyondCode\\LaravelWebSockets\\Facades\\WebSocketRouter"
+            }
+        }
+    }
 }
