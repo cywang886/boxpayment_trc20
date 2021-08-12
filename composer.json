@@ -12,5 +12,9 @@
       "email": "l3lackrooz@gmail.com"
     }
   ],
+  "autoload": {
+    "psr-4": {
+      "BoxPayment\\": "src/BoxPayment/"
+    }
   "minimum-stability": "dev"
 }
