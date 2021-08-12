@@ -35,6 +35,9 @@
             "providers": [
                 "boxpayment\\laravel\\BoxPaymentServiceProvider"
             ],
+            "aliases": {
+              "Boxpayment": "boxpayment\\laravel\\Facades\\BoxPayment"
+            },
           "dont-discover": [
                 "laravel/dusk"
             ]
