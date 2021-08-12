@@ -18,3 +18,4 @@ return [
         'iv' => env('BOX-PAYMENT_IV'),
 
     ],
+];
