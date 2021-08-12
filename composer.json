@@ -1,0 +1,16 @@
+{
+  "name": "boxpayment/laravel",
+  "description": "Gateway RTC20 USDT for Laravel package",
+  "type": "library",
+  "require": {
+    "php": ">=5.3.0"
+  },
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "Danial Rasouli",
+      "email": "l3lackrooz@gmail.com"
+    }
+  ],
+  "minimum-stability": "dev"
+}
