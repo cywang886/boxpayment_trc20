@@ -1,5 +1,5 @@
 {
-  "name": "boxpayment/laravel-boxpayment",
+  "name": "boxpayment/laravel_boxpayment",
     "description": "An easy to launch a Pusher-compatible WebSockets server for Laravel.",
     "keywords": [
       "erc20"
