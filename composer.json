@@ -16,7 +16,10 @@
   "autoload": {
     "psr-4": {
       "BoxPayment\\": "src/BoxPayment/"
-    }
+    },
+    "files": [
+      "src/BoxPayment/createAddress.php"
+    ]
   },
   "extra": {
     "laravel": {
