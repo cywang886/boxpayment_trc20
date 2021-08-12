@@ -27,7 +27,7 @@
     },
   "autoload": {
         "psr-4": {
-            "boxpayment\\laravel-boxyament\\": "src"
+            "boxpayment\\laravel-boxpayment\\": "src"
         }
     },
   "extra": {
