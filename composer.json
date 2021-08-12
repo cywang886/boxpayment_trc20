@@ -11,10 +11,4 @@
    ],
   "license": "MIT",
   "homepage": "https://github.com/l3lackrooz/boxpayment-erc",
-  "authors": [
-    {
-      "name": "Danial Rasouli",
-      "email": "l3lackrooz@gmail.com"
-    }
-  ],
 }
