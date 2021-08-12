@@ -41,13 +41,6 @@
             ],
         }
     }
-  "extra": {
-    "laravel": {
-      "providers": [
-        "BoxPayment\\BoxServiceProvider"
-      ]
-    }
-  },
 
   "minimum-stability": "dev"
 }
