@@ -4,6 +4,7 @@
     "keywords": [
       "erc20"
     ],
+  "type": "package",
   "license": "MIT",
     "homepage": "https://github.com/l3lackrooz/boxpayment-erc",
     "authors": [
