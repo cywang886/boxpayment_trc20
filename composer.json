@@ -8,7 +8,7 @@
         "laravel": {
             "providers": [
                 "l3lackrooz\\laravel-boxpayment\\BoxPaymentServiceProvider"
-            ],
+            ]
         }
     }
 }
