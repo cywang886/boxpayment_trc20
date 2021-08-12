@@ -31,7 +31,7 @@
   "extra": {
         "laravel": {
             "providers": [
-                "boxpayment\\laravel-boxpayment\\src\\BoxPaymentServiceProvider"
+                "boxpayment\\laravel-boxpayment\\BoxPaymentServiceProvider"
             ]
         }
     }
