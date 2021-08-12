@@ -40,7 +40,6 @@
                 "l3lackrooz\\boxpayment-erc\\BoxPaymentServiceProvider"
             ],
         }
-    }
-
+    },
   "minimum-stability": "dev"
 }
