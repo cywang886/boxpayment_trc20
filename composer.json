@@ -7,7 +7,7 @@
   "extra": {
         "laravel": {
             "providers": [
-                "l3lackrooz\\laravel-boxpayment\\src\\BoxPaymentServiceProvider"
+                "boxpayment\\laravel-boxpayment\\src\\BoxPaymentServiceProvider"
             ]
         }
     }
