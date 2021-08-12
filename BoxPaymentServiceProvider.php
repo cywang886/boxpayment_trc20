@@ -1,5 +1,5 @@
 <?php
-namespace BoxPayment;
+namespace BoxPayment\Laravel_Boxpayment;
 
 use Illuminate\Support\ServiceProvider;
 
@@ -14,7 +14,7 @@ class BoxPaymentServiceProvider extends ServiceProvider
     {
         $this->publishes([
             __DIR__.'/../config/config.php' => config_path('boxpayment.php'),
-        ], 'config');
+        ]);
     }
 
     /**
@@ -24,8 +24,8 @@ class BoxPaymentServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->mergeConfigFrom(
-            __DIR__.'/../config/config.php', 'config'
-        );
+        // $this->mergeConfigFrom(
+        //     __DIR__.'/../config/config.php', 'config'
+        // );
     }
 }
