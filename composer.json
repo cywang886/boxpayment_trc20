@@ -16,5 +16,16 @@
     "psr-4": {
       "BoxPayment\\": "src/BoxPayment/"
     }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "BoxPayment\\BoxServiceProvider"
+      ]
+    }
+  },
+"require-dev": {
+    "orchestra/testbench": "^3.8"
+  },
   "minimum-stability": "dev"
 }
