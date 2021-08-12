@@ -2,10 +2,7 @@
   "name": "l3lackrooz/laravel-boxpayment",
     "description": "An easy to launch a Pusher-compatible WebSockets server for Laravel.",
     "keywords": [
-        "beyondcode",
-        "laravel-websockets",
-        "laravel",
-        "php",
+      "erc20"
     ],
   "extra": {
         "laravel": {
