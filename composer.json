@@ -6,5 +6,5 @@
         "laravel-websockets",
         "laravel",
         "php"
-    ],
+    ]
 }
