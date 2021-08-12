@@ -1,14 +1,4 @@
 {
   "name": "boxpayment/laravel",
   "description": "Gateway RTC20 USDT for Laravel package",
-  "keywords": [
-        "boxpayment",
-        "tron",
-        "erc20",
-        "usdt",
-        "laravel",
-        "php"
-   ],
-  "license": "MIT",
-  "homepage": "https://github.com/l3lackrooz/boxpayment-erc",
 }
