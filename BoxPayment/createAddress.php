@@ -10,28 +10,27 @@ class CreateAddress
     private $token;
     private $callback;
 
-    public function __construct($api_key,$amount,$token,$callback)
+    public function __construct($amount,$token,$callback)
     {
-        $this->api_key = $length;
+        $this->api_key = env('BOX_PAYMENT-API_KEY', null);
+        $this->amount = $amount;
+        $this->token = $token;
+        $this->callback = $callback;
     }
 
     public function generate()
     {
         $array = [
-            "amount"=>"10",
-            "token"=>"USDT",
-            "callback"=>"http://localhost/callback.com",
-            "api_key"=>"MlKDEG9HcfNlnMUeTLnmWACbgs9RuAl38pkRSVJckKZrkKYFG8pFrWKJU3OGzuPW"
+            "amount"=>$this->amount,
+            "token"=>$this->token,
+            "callback"=>$this->callback,
+            "api_key"=>$this->api_key
         ];
-        $alphabet = "abcdefghijklmnopqrstuwxyzABCDEFGHIJKLMNOPQRSTUWXYZ0123456789[{(*%+-$#@!)}]";
-        $pass = [];
-        $alphaLength = strlen($alphabet) - 1;
-
-        for ($i = 0; $i < $this->length; $i++)
-        {
-            $n = rand(0, $alphaLength);
-            $pass[] = $alphabet[$n];
-        }
-        return implode($pass);
+        
+        $sign = md5(json_encode($array));
+        unset($array['api_key']);
+        $array['sign'] = $sign;
+        
+        Http::withHeader()
     }
 }
