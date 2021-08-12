@@ -12,9 +12,6 @@
             "providers": [
                 "l3lackrooz\\laravel-boxpayment\\BoxPaymentServiceProvider"
             ],
-            "aliases": {
-                "WebSocketRouter": "BeyondCode\\LaravelWebSockets\\Facades\\WebSocketRouter"
-            }
         }
     }
 }
