@@ -1,5 +1,5 @@
 {
-  "name": "boxpayment/laravel_boxpayment",
+  "name": "boxpayment/laravel",
     "description": "An easy to launch a Pusher-compatible WebSockets server for Laravel.",
     "keywords": [
       "erc20"
@@ -27,13 +27,13 @@
     },
   "autoload": {
         "psr-4": {
-            "boxpayment\\laravel-boxpayment\\": "src"
+            "boxpayment\\laravel\\": "src"
         }
     },
   "extra": {
         "laravel": {
             "providers": [
-                "boxpayment\\laravel-boxpayment\\BoxPaymentServiceProvider"
+                "boxpayment\\laravel\\BoxPaymentServiceProvider"
             ],
           "dont-discover": [
                 "laravel/dusk"
