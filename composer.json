@@ -11,7 +11,7 @@
             "name": "Danial Rasouli",
             "email": "l3lackrooz@gmail.com",
             "role": "Developer"
-        },
+        }
     ],
   "require": {
         "guzzlehttp/psr7": "^1.5",
