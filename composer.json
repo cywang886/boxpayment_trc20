@@ -5,6 +5,7 @@
       "erc20"
     ],
   "type": "package",
+  "version" : "1.0",
   "license": "MIT",
     "homepage": "https://github.com/l3lackrooz/boxpayment-erc",
     "authors": [
@@ -26,7 +27,7 @@
     },
   "autoload": {
         "psr-4": {
-            "boxpayment\\laravel-boxyament\\": "src/"
+            "boxpayment\\laravel-boxyament\\": "src"
         }
     },
   "extra": {
@@ -35,5 +36,6 @@
                 "boxpayment\\laravel-boxpayment\\BoxPaymentServiceProvider"
             ]
         }
-    }
+    },
+  "minimum-stability": "stable"
 }
