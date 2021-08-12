@@ -34,6 +34,9 @@
         "laravel": {
             "providers": [
                 "boxpayment\\laravel-boxpayment\\BoxPaymentServiceProvider"
+            ],
+          "dont-discover": [
+                "laravel/dusk"
             ]
         }
     },
