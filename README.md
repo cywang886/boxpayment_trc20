@@ -4,7 +4,7 @@ Gateway ERC20 USDT for laravel
 ## Installation
 You can install the package via composer:
 ```bash
-$ composer require boxpayment/laravel
+composer require boxpayment/laravel
 ```
 The service provider will automatically register itself.
 
