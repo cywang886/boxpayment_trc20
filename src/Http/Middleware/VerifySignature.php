@@ -1,6 +1,6 @@
 <?php
 
-namespace boxpayment\Laravel\Http\Middleware;
+namespace boxpayment\laravel\Http\Middleware;
 
 use Closure;
 
