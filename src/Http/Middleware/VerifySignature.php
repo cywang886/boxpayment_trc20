@@ -3,6 +3,7 @@
 namespace boxpayment\laravel\Http\Middleware;
 
 use Closure;
+use boxpayment\laravel\Exceptions\CallbackFailed;
 
 class VerifySignature
 {
@@ -12,6 +13,7 @@ class VerifySignature
     $signature = $request->sign;
 
     if (!$signature) {
+      throw CallbackFailed::missingType($this);
       return ['success' => false];
     }
 
