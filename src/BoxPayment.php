@@ -126,9 +126,4 @@ class BoxPayment
             Log::error($e->getMessage());
         }
     }
-
-    static public function test()
-    {
-        return 'hi';
-    }
 }
