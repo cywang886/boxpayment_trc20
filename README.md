@@ -9,7 +9,7 @@ $ composer require boxpayment/laravel
 ## Usage
 We have two method for payment
 
-### Method one
+### Method Two
 each client have a wallet address
 ```php
 <?php
