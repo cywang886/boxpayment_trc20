@@ -1,5 +1,5 @@
 <?php
-namespace boxpayment\laravel;
+namespace Boxpayment\Laravel;
 
 use Illuminate\Support\ServiceProvider;
 
@@ -14,7 +14,7 @@ class BoxPaymentServiceProvider extends ServiceProvider
     {
         $this->publishes([
             __DIR__.'/../config/config.php' => config_path('boxpayment.php'),
-        ]);
+        ],'config');
 
         $this->loadRoutesFrom(__DIR__.'/Routes/api.php');
     }
@@ -27,13 +27,14 @@ class BoxPaymentServiceProvider extends ServiceProvider
     public function register()
     {
         $this->mergeConfigFrom(
-            __DIR__.'/../config/config.php', 'config'
+            __DIR__.'/../config/config.php', 'boxpayment'
         );
 
         $this->app->bind('boxpayment', function ($app) {
-            return new BoxPayment($app);
+            return new Boxpayment($app);
         });
 
-        $this->app->alias('boxpayment', BoxPayment::class);
+        $this->app->alias('boxpayment', Boxpayment::class);
     }
 }
+ 
