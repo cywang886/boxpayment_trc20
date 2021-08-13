@@ -24,8 +24,8 @@ class BoxPaymentServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        // $this->mergeConfigFrom(
-        //     __DIR__.'/../config/config.php', 'config'
-        // );
+        $this->mergeConfigFrom(
+            __DIR__.'/../config/config.php', 'config'
+        );
     }
 }
