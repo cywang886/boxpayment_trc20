@@ -14,8 +14,9 @@ each client have a wallet address
 ```php
 <?php
 
-use RandomPassword\Password;
-
-$password = new Password(10);
-echo $password->generate();
+$params = [
+        'amount' => "10",  
+        'token' => "USDT",  
+        'callback' => 'http://domain.com/callback'  
+    ];
 ```
