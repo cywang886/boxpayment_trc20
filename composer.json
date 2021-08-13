@@ -2,7 +2,11 @@
   "name": "boxpayment/laravel",
     "description": "An easy to launch a Pusher-compatible WebSockets server for Laravel.",
     "keywords": [
-      "erc20"
+      "laravel",
+      "erc20",
+      "tron",
+      "usdt",
+      "gateway"
     ],
   "type": "package",
   "version" : "1.0",
