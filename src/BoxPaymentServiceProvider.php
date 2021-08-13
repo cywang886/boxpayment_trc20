@@ -31,10 +31,10 @@ class BoxPaymentServiceProvider extends ServiceProvider
         );
 
         $this->app->bind('boxpayment', function ($app) {
-            return new Boxpayment($app);
+            return new BoxPayment($app);
         });
 
-        $this->app->alias('boxpayment', Boxpayment::class);
+        $this->app->alias('boxpayment', BoxPayment::class);
     }
 }
  
