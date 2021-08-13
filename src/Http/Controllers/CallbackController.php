@@ -3,7 +3,7 @@ namespace BoxPayment\Laravel\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
-use boxpayment\laravel\Http\Middleware\VerifySignature;
+use BoxPayment\Laravel\Http\Middleware\VerifySignature;
 
 class CallbackController extends Controller
 {
