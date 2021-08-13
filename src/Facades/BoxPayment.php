@@ -1,10 +1,10 @@
 <?php
 
-namespace BoxPayment\Laravel\Facades;
+namespace Boxpayment\Laravel\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
-class BoxPayment extends Facade
+class Boxpayment extends Facade
 {
     /**
      * Get the registered name of the component.
@@ -15,4 +15,4 @@ class BoxPayment extends Facade
     {
         return 'boxpayment';
     }
-}
+} 
