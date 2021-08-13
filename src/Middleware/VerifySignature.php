@@ -1,6 +1,6 @@
 <?php
 
-namespace boxpayment\laravel\Http\Middleware;
+namespace BoxPayment\Laravel\Http\Middleware;
 
 use Closure
 class VerifySignature
