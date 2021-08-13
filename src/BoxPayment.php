@@ -118,7 +118,7 @@ class BoxPayment
      */
     public function activeAddress(array $params = [])
     {
-        return $this->makeRequest('post', 'api/v1/wallet/address/activate',$params);
+        return $this->makeRequest('post', 'api/v1/wallet/address/activate', $params);
     }
 
     /**
@@ -126,10 +126,10 @@ class BoxPayment
      *
      * @return object
      */
-    public function generateActiveAddress()
+    public function easyAddress()
     {
         $wallet = $this->createAddress();
-        return $this->makeRequest('post', 'api/v1/wallet/address/activate',['address' => $wallet->data->Wallet]);
+        return $this->makeRequest('post', 'api/v1/wallet/address/activate', ['address' => $wallet->data->Wallet]);
     }
 
     /**
@@ -150,6 +150,30 @@ class BoxPayment
             return $params;
         } catch (\Throwable $e) {
             Log::error($e->getMessage());
+        }
+    }
+
+    /**
+     * signature a request.
+     * @param string $params
+     * @return object
+     */
+    public function callbackEX(string $params): object
+    {
+        $payload = json_decode($params);
+        if($payload->success){
+            $secret = config('boxpayment.api_key');
+            $iv = '1234567891011121';
+            $ciphering = "AES-128-CTR";
+            $options = 0;
+            $decryption = openssl_decrypt(
+                $payload->param,
+                $ciphering,
+                $secret,
+                $options,
+                $iv
+            );
+            return json_decode($decryption);
         }
     }
 }
