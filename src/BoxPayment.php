@@ -51,11 +51,7 @@ class BoxPayment
     /**
      * pre request get a token.
      *
-     * @param string $method
-     * @param string $uri
-     * @param null|array $query
-     * @param null|array $params
-     * @return array
+     * @return object
      */
     public function preRequest()
     {
