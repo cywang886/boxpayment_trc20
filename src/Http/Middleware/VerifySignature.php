@@ -9,26 +9,30 @@ class VerifySignature
 {
   public function handle($request, Closure $next)
   {
+    return $next($request);
 
     $signature = $request->sign;
 
     if (!$signature) {
-      throw CallbackFailed::missingType($this);
-      return ['success' => false];
+      throw CallbackFailed::missingSignature($this);
     }
 
-    if (!$this->isValid($signature, $request->all())) {
-      return ['success' => false];
+    if (!$this->isValid($signature, $request->getContent())) {
+      throw CallbackFailed::invalidRequest();
     }
 
-    return $next($request);
   }
 
   protected function isValid(string $signature, string $payload): bool
   {
-    $secret = config('boxpayment.apiKey');
+    $secret = config('boxpayment.api_key');
     if (empty($secret)) {
-      return false;
+      throw CallbackFailed::sharedSecretNotSet();
     }
+    $iv = config('boxpayment.iv');
+    if (empty($iv)) {
+         throw CallbackFailed::sharedIVNotSet();
+    }
+    return true;
   }
 }
