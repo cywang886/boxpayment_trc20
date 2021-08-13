@@ -1,6 +1,6 @@
 <?php
 
-namespace Boxpayment\Laravel\Facades;
+namespace boxpayment\Laravel\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
