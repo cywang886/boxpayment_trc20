@@ -4,7 +4,7 @@ namespace boxpayment\laravel\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
-class Boxpayment extends Facade
+class BoxPayment extends Facade
 {
     /**
      * Get the registered name of the component.
