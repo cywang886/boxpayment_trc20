@@ -6,11 +6,10 @@ This project using composer.
 ```
 $ composer require boxpayment/laravel
 ```
-## Method
-we have two method for payment.
-
 ## Usage
-Create a request 
+We have two method for payment
+
+#method one
 ```php
 <?php
 
