@@ -12,28 +12,19 @@ class CallbackFailed extends Exception
         return new static('The request did not contain a `sign` argumant.');
     }
 
-    public static function invalidSignature($signature)
+    public static function invalidRequest()
     {
-        return new static("The signature `{$signature}` found in the header named `X-CC-Webhook-Signature` is invalid. Make sure that the `coinbase.webhookSecret` config key is set to the value you found on the Coinbase Commerce dashboard. If you are caching your config try running `php artisan clear:cache` to resolve the problem.");
+        return new static("The Request not valid.");
     }
 
     public static function sharedSecretNotSet()
     {
-        return new static('The Coinbase Commerce webhook shared secret is not set. Make sure that the `coinbase.webhookSecret` config key is set to the value you found on the Coinbase Commerce dashboard.');
-    }
-    
-    public static function jobClassDoesNotExist(string $jobClass, CoinbaseWebhookCall $webhookCall)
-    {
-        return new static("Could not process webhook id `{$webhookCall->id}` of type `{$webhookCall->type} because the configured jobclass `$jobClass` does not exist.");
+        return new static('The Boxpayment callback shared secret is not set. Make sure that the `boxpayment.apiKey` config key is set to the value you found on the BoxPayment Admin dashboard.');
     }
 
-    public static function missingType()
+    public static function sharedIVNotSet()
     {
-        return new static('The webhook call did not contain a type. Valid Coinbase Commerce webhook calls should always contain a type.');
+        return new static('The Boxpayment callback IV is not set. Make sure that the `boxpayment.iv` config key is set to the value you found on the BoxPayment Admin dashboard.');
     }
 
-    public function render($request)
-    {
-        return response(['error' => $this->getMessage()], 400);
-    }
 }
