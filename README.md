@@ -19,4 +19,5 @@ $params = [
         'token' => "USDT",  
         'callback' => 'http://domain.com/callback'  
     ];
+$gateway = BoxPayment::createRequest($params);
 ```
