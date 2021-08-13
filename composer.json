@@ -27,16 +27,16 @@
     },
   "autoload": {
         "psr-4": {
-            "Boxpayment\\Laravel\\": "src"
+            "boxpayment\\laravel\\": "src"
         }
     },
   "extra": {
         "laravel": {
             "providers": [
-                "Boxpayment\\Laravel\\BoxPaymentServiceProvider"
+                "boxpayment\\laravel\\BoxPaymentServiceProvider"
             ],
             "aliases": {
-              "Boxpayment": "Boxpayment\\Laravel\\Facades\\BoxPayment"
+              "Boxpayment": "boxpayment\\laravel\\Facades\\BoxPayment"
             },
           "dont-discover": [
                 "laravel/dusk"
