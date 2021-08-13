@@ -79,11 +79,10 @@ class BoxPayment
     {
         try {
             $pre = $this->preRequest();
-            if(!$pre->success){
-                
+            if (!$pre->success) {
             }
             $signatureParam = $this->sign($params);
-            $response = $this->client->request($method, $uri, ['headers' => ['Authorization' => $this->auth],'json' => $signatureParam]);
+            $response = $this->client->request($method, $uri, ['headers' => ['Authorization' => $this->auth], 'json' => $signatureParam]);
             return json_decode($response->getBody()->getContents());
         } catch (ClientException $e) {
             Log::error($e->getResponse()->getBody(true));
@@ -100,6 +99,37 @@ class BoxPayment
     public function createRequest(array $params = [])
     {
         return $this->makeRequest('post', 'api/v2/request/create', $params);
+    }
+
+    /**
+     * create an address.
+     *
+     * @return object
+     */
+    public function createAddress(array $params = [])
+    {
+        return $this->makeRequest('get', 'api/v1/wallet/address/generate');
+    }
+
+    /**
+     * active an address.
+     *
+     * @return object
+     */
+    public function activeAddress(array $params = [])
+    {
+        return $this->makeRequest('post', 'api/v1/wallet/address/activate',$params);
+    }
+
+    /**
+     * active address after create.
+     *
+     * @return object
+     */
+    public function generateActiveAddress()
+    {
+        $wallet = $this->createAddress();
+        return $this->makeRequest('post', 'api/v1/wallet/address/activate',['address' => $wallet->data->Wallet]);
     }
 
     /**
