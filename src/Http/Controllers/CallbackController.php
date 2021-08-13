@@ -5,7 +5,7 @@ use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 use boxpayment\laravel\Http\Middleware\VerifySignature;
 
-class WebhookController extends Controller
+class CallbackController extends Controller
 {
   public function __construct()
     {
