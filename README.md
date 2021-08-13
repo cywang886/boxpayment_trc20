@@ -7,38 +7,43 @@ This project using composer.
 $ composer require boxpayment/laravel
 ```
 ## Usage
-We have two method for payment
 
-### Method Two
-each client have a wallet address
+### createAddress()
+create Tron address.
 ```php
 <?php
 
-use BoxPayment;
+use boxpayment\laravel\Facades\BoxPayment;
 
-$params = [
-        'amount' => "10",  
-        'token' => "USDT",  
-        'callback' => 'http://domain.com/callback'  
-    ];
-$gateway = BoxPayment::createRequest($params);
+
+BoxPayment::createAddress();
 ```
-sample response 
-```json
-{
- "success":true,
- "data":{               
-        "orderid":"ce13b4ab0462606495aaea222a7ab9b231cd2cc7a470feb2dd6de7d6853935",
-        "amount":"10",
-        "token":"USDT",
-        "address":"THhcDvefs2GZ9PZSHoseCT9y5XfbRgJNcB",
-        "timeout":28800,
-        "qr_url":{
-                "address":"http://domain.com/api/v2/payment/qr/address/THhcDvefs2GZ9PZSHoseCT9y5XfbRgJNcB",
-                "gateway":"http://domain.com/api/v2/payment/qr/gateway/ce13b4ab0462606495aaea222a7ab9b231cd2cc7a470feb2dd6de7d6853935"
-        },
-        "cashier_url":"http://domain.com/payment/gateway/ce13b4ab0462606495aaea222a7ab9b231cd2cc7a470feb2dd6de7d6853935",
-        "sign":"e63e5114bba19cabc33ca1dea74de676"
-        }
- }
+### activateAddress()
+Active a address created with createAddress() method.
+```php
+<?php
+
+use boxpayment\laravel\Facades\BoxPayment;
+
+$param = [ 'address' => "you wallet address created with createAddress()"];
+BoxPayment::activeAddress($param);
+```
+### easyAddress()
+Create and active a address
+```php
+<?php
+
+use boxpayment\laravel\Facades\BoxPayment;
+
+BoxPayment::easyAddress();
+```
+### callbackEX()
+Get callback of transaction 
+```php
+<?php
+
+use Illuminate\Http\Request;
+use boxpayment\laravel\Facades\BoxPayment;
+
+BoxPayment::callbackEX(json_decode($request->getContent()));
 ```
