@@ -1,5 +1,5 @@
 <?php
-namespace Boxpayment\Laravel;
+namespace boxpayment\Laravel;
 
 use Illuminate\Support\ServiceProvider;
 
