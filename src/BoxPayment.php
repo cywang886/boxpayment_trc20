@@ -1,6 +1,6 @@
 <?php
 
-namespace BoxPayment\Laravel;
+namespace Boxpayment\Laravel;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\GuzzleException;
