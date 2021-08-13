@@ -15,6 +15,8 @@ class BoxPaymentServiceProvider extends ServiceProvider
         $this->publishes([
             __DIR__.'/../config/config.php' => config_path('boxpayment.php'),
         ]);
+
+        $this->loadRoutesFrom(__DIR__.'/Routes/api.php');
     }
 
     /**
@@ -27,5 +29,11 @@ class BoxPaymentServiceProvider extends ServiceProvider
         $this->mergeConfigFrom(
             __DIR__.'/../config/config.php', 'config'
         );
+
+        $this->app->bind('boxpayment', function ($app) {
+            return new BoxPayment($app);
+        });
+
+        $this->app->alias('boxpayment', BoxPayment::class);
     }
 }
