@@ -1,5 +1,5 @@
 <?php
-namespace boxpayment\Laravel\Http\Controllers;
+namespace boxpayment\laravel\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
