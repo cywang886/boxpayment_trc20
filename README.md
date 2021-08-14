@@ -1,5 +1,5 @@
 # Laravel wrapper for the BoxPayment API
-Gateway ERC20 USDT for laravel
+Gateway TRC20 USDT for laravel
 
 ## Installation
 You can install the package via composer:
