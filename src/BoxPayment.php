@@ -16,7 +16,7 @@ class BoxPayment
     private $baseurl;
 
     /**
-     * @var Client
+     * @var string
      */
     private $client;
 
